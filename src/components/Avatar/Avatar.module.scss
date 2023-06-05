@@ -1,0 +1,7 @@
+@import 'utils';
+
+.avatar {
+  border-radius: var(--max-radius);
+  object-fit: cover;
+  @include center;
+}

@@ -1,0 +1,59 @@
+@import 'utils';
+
+.followCard {
+  position: absolute;
+  background-color: var(--background);
+  max-height: 250px;
+  max-width: 320px;
+  min-width: 300px;
+  padding: 15px;
+  border-radius: var(--mid-radius);
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 10px;
+  transition: background-color var(--t-duration) ease-in-out;
+  cursor: pointer;
+  z-index: var(--z-card);
+  animation: fadeIn 0.3s ease-in-out;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 700px) {
+  .followCard {
+    min-width: 250px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.otherInfo {
+  margin-top: 10px;
+  @include flex;
+}
+
+.following,
+.followers {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bio {
+  color: var(--text);
+}
+
+.followText {
+  color: var(--subtext);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

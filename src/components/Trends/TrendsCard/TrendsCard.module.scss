@@ -1,0 +1,37 @@
+@import 'utils';
+
+.trendsCard {
+  padding: 15px;
+  @include flex;
+  cursor: pointer;
+}
+
+.trendsCard:hover {
+  background-color: var(--background-card-hvr);
+}
+
+.title {
+  font-size: 15px;
+}
+
+.description {
+  font-size: 15px;
+  color: var(--subtext);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.more {
+  height: fit-content;
+  @include center;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: var(--max-radius);
+}
+
+.more:hover {
+  background-color: var(--primary-transluced);
+  color: var(--primary);
+}

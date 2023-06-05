@@ -1,0 +1,47 @@
+@import 'utils';
+
+.actions {
+  gap: 5px;
+  @include flex;
+}
+
+.action {
+  cursor: pointer;
+  padding: 8px;
+  max-width: 36px;
+  max-height: 36px;
+  border-radius: var(--max-radius);
+  color: var(--primary);
+  @include center;
+
+  &:hover {
+    background-color: var(--primary-transluced);
+  }
+}
+
+.inputContainer {
+  max-width: 36px;
+  max-height: 36px;
+  position: relative;
+  @include center;
+
+  .input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    color: var(--primary);
+    font-size: var(--font-size-small);
+    text-align: center;
+    cursor: pointer;
+    @include center;
+  }
+
+  &:hover {
+    .action {
+      background-color: var(--primary-transluced);
+    }
+  }
+}

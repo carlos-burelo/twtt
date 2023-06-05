@@ -1,0 +1,23 @@
+.searchBox {
+  height: 100%;
+  padding-block: 8px;
+  height: var(--header-height);
+  background-color: var(--background);
+  position: relative;
+}
+.search {
+  border-radius: var(--max-radius);
+  padding: 15px;
+  padding-left: 50px;
+}
+.icon {
+  color: var(--subtext);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  padding-block: 8px;
+  display: grid;
+  place-content: center;
+  width: 50px;
+}

@@ -1,0 +1,17 @@
+@import 'utils';
+
+.notification {
+  width: 100%;
+  padding: 15px;
+  @include flex;
+  cursor: pointer;
+  border-top: solid 1px var(--border);
+}
+
+.notification:hover {
+  background-color: var(--background-card-hvr);
+}
+
+.message {
+  @include flex;
+}

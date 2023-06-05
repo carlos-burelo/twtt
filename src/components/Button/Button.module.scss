@@ -1,0 +1,23 @@
+.button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: var(--background-btn);
+  color: var(--text-btn);
+  padding: 6px 15px;
+  border-radius: var(--max-radius);
+  font-weight: 700;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.primary {
+  background: var(--primary);
+}
+
+.primary:hover {
+  background: var(--primary-hvr);
+}

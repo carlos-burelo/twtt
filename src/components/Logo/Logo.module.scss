@@ -1,0 +1,32 @@
+@import 'utils';
+
+.brand {
+  @include mobile {
+    display: none;
+  }
+}
+
+.text {
+  @include tablet {
+    display: none;
+  }
+}
+
+.brand mark {
+  padding-inline: 2px;
+  margin-left: 6px;
+}
+
+.icon {
+  @include center;
+  font-size: 25px;
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+.tweetCard {
+  width: 100%;
+  border-top: solid 1px var(--border);
+  border-left-color: transparent;
+  padding-inline: 15px;
+  padding-block: 10px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+.tweet {
+  padding-left: 10px;
+}
+.image {
+  max-height: 650px;
+  width: auto;
+  object-fit: contain;
+}

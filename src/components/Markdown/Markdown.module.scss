@@ -1,0 +1,10 @@
+.markdown div p > * {
+  margin-block: 5px;
+}
+.markdown p {
+  color: var(--text);
+}
+.markdown a {
+  color: var(--primary);
+  font-weight: 600;
+}

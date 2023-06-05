@@ -1,0 +1,37 @@
+.sidebar {
+  padding: 10px 20px;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    display: none;
+  }
+}
+
+.search {
+  position: sticky;
+  top: 0;
+  padding-inline: 20px;
+  z-index: var(--z-nav);
+}
+
+.asideCard {
+  background-color: var(--background-card);
+  border-radius: var(--mid-radius);
+  margin-bottom: 15px;
+}
+
+.title,
+.viewMore {
+  padding: 15px;
+}
+
+.viewMore {
+  border-radius: 0 0 var(--mid-radius) var(--mid-radius);
+  cursor: pointer;
+  color: var(--primary);
+}
+
+.viewMore:hover {
+  background-color: var(--chip-hvr);
+}

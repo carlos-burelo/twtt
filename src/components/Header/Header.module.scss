@@ -1,0 +1,51 @@
+@import 'utils';
+
+.header {
+  height: var(--header-height);
+  background-color: var(--backgroun-header);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  padding-inline: 15px;
+}
+
+.head {
+  height: var(--header-height);
+  @include flex-between;
+}
+
+.headContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.expand {
+  height: calc(var(--header-height) * 2);
+}
+
+.child {
+  height: var(--header-height);
+}
+
+.back {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  @include center;
+}
+
+.back:hover {
+  background-color: var(--background-hvr);
+  border-radius: var(--max-radius);
+}
+
+.subtitle {
+  font-size: 13px;
+}

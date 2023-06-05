@@ -1,0 +1,9 @@
+.feed {
+  width: var(--feed-width);
+  border-right: solid 1px var(--border);
+}
+@media (max-width: 700px) {
+  .feed {
+    padding-bottom: calc(var(--header-height) + 20px);
+  }
+}

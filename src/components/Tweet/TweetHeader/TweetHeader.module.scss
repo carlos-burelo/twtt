@@ -1,0 +1,30 @@
+@import 'utils';
+
+.tweetHeader {
+  @include flex-between;
+}
+
+.tweetData {
+  display: flex;
+  gap: 10px;
+}
+
+.tweetAuthorName {
+  margin-right: 5px;
+}
+
+.more {
+  @include center;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: var(--max-radius);
+}
+
+.tweetDate {
+  color: var(--subtext);
+}
+
+.more:hover {
+  background-color: var(--primary-transluced);
+  color: var(--primary);
+}

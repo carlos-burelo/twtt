@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      // CLIENT
+      "#components/*": ["./components/*"],
+      "#graphql/client": ["./graphql/index"],
+      "#hooks/*": ["./hooks/*"],
+      // SHARED
+      "#mocks/*": ["./shared/mocks/*"],
+      "#shared/*": ["./shared/*"],
+      "#libs/*": ["./shared/libs/*"],
+      "#types": ["./shared/types/index"],
+      // SERVER
+      "#server/*": ["../server/*"],
+      "#database/*": ["../server/database/*"]
+    },
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

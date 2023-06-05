@@ -1,0 +1,22 @@
+@import 'utils';
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  overflow-x: scroll;
+}
+
+.categories::-webkit-scrollbar {
+  display: none;
+}
+
+.category {
+  height: 100%;
+  cursor: pointer;
+  @include center;
+}
+
+.category:hover {
+  background-color: var(--nav-link-hvr);
+}

@@ -1,0 +1,36 @@
+@import 'utils';
+
+.tweetActions {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 10px;
+}
+
+.action {
+  font-size: 14px;
+  color: var(--subtext);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  border-radius: var(--max-radius);
+  padding: 7px;
+  @include center;
+  transition: color, background-color var(--t-duration) ease-in-out;
+}
+
+.action:hover .icon {
+  background: var(--bg-color);
+  color: var(--color);
+}
+
+.text {
+  margin-left: 2px;
+}
+
+.action:hover .text {
+  color: var(--color);
+}

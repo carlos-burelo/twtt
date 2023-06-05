@@ -1,0 +1,31 @@
+@import 'utils';
+
+.link {
+  padding: 15px 10px;
+  border-radius: var(--min-radius);
+  width: 100%;
+  @include flex;
+}
+
+.link:hover {
+  background-color: var(--background-hvr);
+}
+
+@media (max-width: 1200px) {
+  .link {
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+  }
+
+  .link span {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .link {
+    width: 60px;
+    height: 60px;
+  }
+}

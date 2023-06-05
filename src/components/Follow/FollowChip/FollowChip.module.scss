@@ -1,0 +1,16 @@
+@import 'utils';
+
+.followChip {
+  width: 100%;
+  padding: 10px 20px;
+  cursor: pointer;
+  @include flex-between;
+}
+
+.followChip:hover {
+  background-color: var(--chip-hvr);
+}
+
+.user {
+  @include flex;
+}

@@ -1,0 +1,31 @@
+.layout {
+  width: 100%;
+  padding: 0 var(--layout-margin);
+  display: grid;
+  grid-template-columns: var(--nav-width) 1fr;
+}
+.container {
+  border-right: solid 1px var(--border);
+}
+.content {
+  display: grid;
+  grid-template-columns: var(--feed-width) 1fr;
+}
+@media (max-width: 1000px) {
+  .layout {
+    justify-items: center;
+  }
+  .content {
+    grid-template-columns: var(--feed-width);
+  }
+}
+
+@media (max-width: 700px) {
+  .content,
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    width: 100%;
+  }
+}

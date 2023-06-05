@@ -1,0 +1,126 @@
+.images {
+  position: relative;
+  --avatar-height: 140px;
+  margin-bottom: calc(var(--avatar-height) / 2);
+}
+
+.banner {
+  border-radius: 0;
+}
+
+.avatarContainer {
+  position: absolute;
+  bottom: 0%;
+  left: 18px;
+  transform: translateY(50%);
+}
+
+.avatar {
+  border: solid 4px var(--background) !important;
+}
+
+.info {
+  padding: 15px;
+}
+
+.username {
+  font-size: 15px;
+  color: var(--subtext);
+  font-weight: 400;
+}
+
+.bio {
+  color: var(--text);
+}
+
+.otherInfo {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.website,
+.joinDate {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  color: var(--subtext);
+}
+
+.website span {
+  color: var(--primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.joinDate span {
+  display: flex;
+  line-height: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.otherInfo,
+.bio {
+  margin-top: 12px;
+}
+
+.categories {
+  display: flex;
+  height: var(--header-height);
+  scroll-padding: 0 36px;
+  overflow-x: auto;
+  transform: rotate3d(0, 0, 0);
+  scroll-snap-type: x mandatory;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-direction: row;
+  border-bottom: solid 1px var(--border);
+}
+
+.categories::-webkit-scrollbar {
+  display: none;
+}
+
+.category {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.category:hover {
+  background-color: var(--nav-link-hvr);
+}
+
+.category.active {
+  color: var(--text);
+}
+
+.category.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 4px;
+  border-radius: var(--max-radius);
+  background-color: var(--primary);
+}
+
+@media (max-width: 700px) {
+  .tweets {
+    padding-bottom: calc(var(--header-height) + 20px);
+  }
+}

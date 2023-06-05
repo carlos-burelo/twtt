@@ -1,0 +1,15 @@
+.textinput {
+  background-color: var(--background);
+  width: 100%;
+  height: 100%;
+  resize: none;
+  border: none;
+  padding: 10px;
+  color: var(--texts);
+  font-size: 1.25em;
+  outline: none;
+
+  &::placeholder {
+    color: var(--texts);
+  }
+}

@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+*::selection {
+  background: var(--primary);
+  color: var(--background);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+  transition: background-color var(--t-duration) ease-in-out;
+}
+
+svg {
+  fill: currentColor;
+  width: 1.25em;
+  height: 1.25em;
+}
+
+p {
+  color: var(--subtext);
+}
+
+input {
+  border: none;
+  outline: none;
+  background: var(--background-hvr);
+  color: var(--text);
+  height: 100%;
+  width: 100%;
+  border-radius: var(--max-radius);
+  transition: background-color var(--t-duration) ease-in-out;
+}
+
+img {
+  border-radius: var(--mid-radius);
+  border: solid 1px var(--border);
+  max-width: 100%;
+  width: 100%;
+}
+
+mark {
+  background-color: var(--primary);
+  color: var(--background);
+  padding: 0px 2px;
+  border-radius: var(--min-radius);
+}
+
+:root {
+  color-scheme: dark;
+  --primary: #ffa31a;
+  --background: #000000;
+  --background-card: #0a0a0a;
+  --background-btn: #ffffff;
+  --text-btn: #000000;
+  --text: #dadada;
+  --subtext: rgb(113, 117, 122);
+  --heading: #e9e9e9;
+  --border: #2f3337;
+  /* EFFECTS */
+  --primary-hvr: #d68306;
+  --primary-transluced: #ffa31a18;
+  --background-hvr: #0f0f0f;
+  --background-card-hvr: rgba(255, 255, 255, 0.03);
+  --backgroun-header: #000000a6;
+  --chip-hvr: #161616;
+  --nav-link-hvr: rgba(231, 231, 234, 0.1);
+  /* MEDIA SIZES*/
+  --nav-width: 260px;
+  --feed-width: 600px;
+  --header-height: 53px;
+  --min-radius: 6px;
+  --mid-radius: 12px;
+  --max-radius: 1000px;
+  --layout-margin: 60px;
+  /* ANIMATIONS */
+  --t-duration: 0.15s;
+  --z-nav: 1000;
+  --z-modal: 2000;
+  --z-card: 1500;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --nav-width: 60px;
+    --layout-margin: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  :root {
+    --feed-width: 100%;
+    --layout-margin: 0;
+  }
+}
