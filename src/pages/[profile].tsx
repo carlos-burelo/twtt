@@ -1,7 +1,7 @@
 import Layout from '#components/Layout'
 import ProfileContainer from '#components/Profile/ProfileContainer'
 import Sidebar from '#components/Sidebar'
-import gql, { userQuery } from '#graphql/client'
+import gql, { gqlClient, userQuery } from '#graphql/client'
 import { User } from '#shared/types'
 import type { GetServerSideProps, NextPage } from 'next'
 
@@ -20,7 +20,8 @@ const Lists: NextPage<Props> = ({ }) => {
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { profile } = params as { profile: string }
-  const data = await gql<User>(userQuery, { userName: profile })
+  const data = await gqlClient.request<{ user: User }>(userQuery, { userName: profile })
+  // const data = await gql<User>(userQuery, { userName: profile })
   return {
     props: {
       user: data.user,

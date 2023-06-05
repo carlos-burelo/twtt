@@ -1,27 +1,28 @@
 import { host } from '#shared/env'
 
+import { GraphQLClient } from 'graphql-request'
+
+const API_URL = `${host}/api/graphql`
+console.log('API_URL -->', API_URL)
+export const gqlClient = new GraphQLClient(API_URL, {
+  headers: {
+    'Content-Type': 'application/json',
+  }
+})
+
 export default async function gql<T = any>(
   query: string,
   variables?: any
-): Promise<{ [k: string]: T }> {
-  let userQuery = `
-    query {
-      ${query}
+): Promise<any> {
+
+  const client = new GraphQLClient(`${host}/api/graphql`, {
+    headers: {
+      'Content-Type': 'application/json',
     }
-  `
-  if (variables) {
-    for (const key in variables) {
-      const regex = new RegExp(`\\$${key}`, 'g')
-      userQuery = userQuery.replace(regex, `"${variables[key]}"`)
-    }
-  }
-  const fetcher = async (query: string, variables?: any) =>
-    await fetch(`${host}/api/graphql`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query, variables }),
-    }).then(res => res.json())
-  const response = await fetcher(userQuery, variables)
-  return response.data || null
+  })
+
+  const res = await client.request(query, variables)
+  console.log('res -->', res)
+  return res
 }
-export * from './queys'
+export * from './queries'

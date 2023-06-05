@@ -3,7 +3,7 @@ import Layout from '#components/Layout'
 import Sidebar from '#components/Sidebar'
 import TweetBox from '#components/Tweet/TweetBox'
 import TweetCard from '#components/Tweet/TweetCard'
-import query from '#graphql/client'
+import query, { gqlClient } from '#graphql/client'
 import { Tweet } from '#types'
 import type { NextPage } from 'next'
 
@@ -24,23 +24,27 @@ const Home: NextPage<Props> = ({ tweets }) => {
   )
 }
 export const getServerSideProps = async () => {
-  const { tweets } = await query(
-    `tweets {
-      id,
-      author {
-        displayName,
-        avatar,
-        userName
+
+  const { tweets } = await gqlClient.request<any>(`
+    query {
+      tweets {
+        id,
+        author {
+          displayName,
+          avatar,
+          userName
+        }
+        content {
+          text
+          media
+        }
       }
-      content {
-        text
-        media
-      }
-    }`
-  )
+    }
+    `)
   return {
     props: {
-      tweets,
+      tweets: tweets || [],
+      // tweets,
     },
   }
 }

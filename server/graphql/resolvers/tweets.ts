@@ -4,7 +4,10 @@ import { Tweet, User } from '#types'
 
 export default {
   Query: {
-    tweets: async () => tweets,
+    tweets: async () => {
+      console.log('tweets -->')
+      return tweets
+    },
     tweetList: async (_: any, args: { authorId: string }): Promise<Tweet[]> => {
       const { authorId } = args
       return tweets.filter(tweet => tweet.authorId === authorId)

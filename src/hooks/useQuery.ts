@@ -1,11 +1,7 @@
 import { useEffect, useState } from 'react'
 
 export default function useQuery(query: string, variables?: any) {
-  let userQuery = `
-    query {
-      ${query}
-    }
-  `
+  let userQuery = query
 
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
