@@ -8,7 +8,7 @@ export default function Logo() {
         <LogoIcon />
       </div>
       <h1 className={_.text}>
-        Tweet<mark>Hub</mark>
+        Tweet<mark>#</mark>
       </h1>
     </section>
   )

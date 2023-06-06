@@ -1,4 +1,4 @@
-# Tweet Hub
+# Twtt
 
 A simple social network focused on developers with tools for the creation of educational content with a twitter-like interface for an easy transition to the platform.
 
@@ -25,6 +25,10 @@ Among other reasons is the fact of my fascination for sharing the content that I
 [Roadmap and Schema](https://excalidraw.com/#json=nKxe7qNSrMiUMq1wcSjuJ,fWGRlfcn0XLLac9TzjyR9w)
 
 ## Preview
+[Twwt V1](https://twtt-app.vercel.app)
+
+or New Version
+[Twtt V2](https://twtt.vercel.app)
 
 ### Home
 
@@ -48,13 +52,13 @@ Among other reasons is the fact of my fascination for sharing the content that I
 
 ## Stack
 
-- [x] GraphQL - [GraphQL Yoga](https://www.graphql-yoga.com/)
-- [x] React - [React](https://reactjs.org/)
-- [x] Next.js - [Next.js](https://nextjs.org/)
-- [x] Sass - [Sass](https://sass-lang.com/)
-- [x] Node.js - [Node.js](https://nodejs.org/)
-- [x] MongoDB - [MongoDB](https://www.mongodb.com/)
-- [x] Zustand - [Zustand](https://github.com/pmndrs/zustand)
-- [x] Markdown - [react-snowdown](https://github.com/jerolimov/react-showdown)
+- [x] Server - [GraphQL Yoga](https://www.graphql-yoga.com/)
+- [x] UI Library - [React](https://reactjs.org/)
+- [x] Client Framework - [Next.js](https://nextjs.org/)
+- [x] Style Preprosessor - [Sass](https://sass-lang.com/)
+- [x] Runtime - [Node.js](https://nodejs.org/)
+- [x] Database - [MongoDB](https://www.mongodb.com/)
+- [x] State Management - [Zustand](https://github.com/pmndrs/zustand)
+- [x] Marked text - [react-snowdown](https://github.com/jerolimov/react-showdown)
 
 #### Auhor: Carlos Burelo
